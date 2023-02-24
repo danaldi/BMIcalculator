@@ -20,13 +20,13 @@ app.post('/',(req,res)=>{
     if (result < 18.5){
         var condition = "Underweight"
     }
-    else if (18.5<result<24.9){
+    else if (result>=18.5 && result<24.9){
         var condition ='on Healthy Weight'
     }
-    else if (25<result<29.9){
+    else if result>=24.9 && result<29.9){
         var condition ='Overweight'
     }
-    else if (result>30){
+    else if (result>=30){
         var condition = 'Obese'
     }
     else{ console.log(result)}
